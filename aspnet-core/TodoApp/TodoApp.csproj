@@ -95,4 +95,8 @@
     <Content Remove="$(UserProfile)\.nuget\packages\*\*\contentFiles\any\*\*.abppkg*.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Abc.Projects.Share.Core\Abc.Projects.Share.Core.csproj" />
+  </ItemGroup>
+
 </Project>

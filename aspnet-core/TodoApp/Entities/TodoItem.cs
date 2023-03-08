@@ -1,4 +1,5 @@
-﻿using Volo.Abp.Domain.Entities;
+﻿using Abc.Projects.Share.Core._Business.Entities;
+using Volo.Abp.Domain.Entities;
 
 namespace TodoApp.Entities
 {
@@ -6,5 +7,8 @@ namespace TodoApp.Entities
     {
         public Guid Id { get; set; }
         public string Text { get; set; }
+
+        public QLCVABC abc { get; set; }
+
     }
 }
