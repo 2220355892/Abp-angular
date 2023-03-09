@@ -8,7 +8,7 @@ namespace TodoApp.Entities
         public Guid Id { get; set; }
         public string Text { get; set; }
 
-        public QLCVABC abc { get; set; }
+        //public QLCVABC abc { get; set; }
 
     }
 }

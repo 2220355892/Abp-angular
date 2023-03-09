@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Abc.Projects.Share.Core._Business.Entities;
+using Microsoft.EntityFrameworkCore;
 using TodoApp.Entities;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
@@ -17,6 +18,7 @@ public class TodoAppDbContext : AbpDbContext<TodoAppDbContext>
         : base(options)
     {
     }
+    public DbSet<ResRand> ResRands { get; set; }
     public DbSet<TodoItem> TodoItems { get; set; }  
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -36,6 +38,10 @@ public class TodoAppDbContext : AbpDbContext<TodoAppDbContext>
         builder.Entity<TodoItem>(b =>
         {
             b.ToTable("TodoItems");
+        });
+        builder.Entity<ResRand>(b =>
+        {
+            b.ToTable("ResRands");
         });
     }
 }

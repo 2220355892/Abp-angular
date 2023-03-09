@@ -6,21 +6,21 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TodoApp.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedTodoItem : Migration
+    public partial class AddedResRand : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TodoItems",
+                name: "ResRands",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Text = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Text = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TodoItems", x => x.Id);
+                    table.PrimaryKey("PK_ResRands", x => x.Id);
                 });
         }
 
@@ -28,7 +28,7 @@ namespace TodoApp.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TodoItems");
+                name: "ResRands");
         }
     }
 }

@@ -24,6 +24,20 @@ namespace TodoApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Abc.Projects.Share.Core._Business.Entities.ResRand", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ResRands", (string)null);
+                });
+
             modelBuilder.Entity("TodoApp.Entities.TodoItem", b =>
                 {
                     b.Property<Guid>("Id")

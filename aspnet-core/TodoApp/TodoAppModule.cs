@@ -95,6 +95,9 @@ namespace TodoApp;
     typeof(AbpSettingManagementApplicationModule),
     typeof(AbpSettingManagementEntityFrameworkCoreModule),
     typeof(AbpSettingManagementHttpApiModule)
+    //typeof(Abc.Projects.Share.Core.Module),
+    //typeof(Abc.Projects.Application.RandomResultSevice)
+
 )]
 public class TodoAppModule : AbpModule
 {

@@ -13,8 +13,8 @@ using Volo.Abp.EntityFrameworkCore;
 namespace TodoApp.Migrations
 {
     [DbContext(typeof(TodoAppDbContext))]
-    [Migration("20230308082748_Added_TodoItem")]
-    partial class AddedTodoItem
+    [Migration("20230309071709_Added_ResRand")]
+    partial class AddedResRand
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,20 @@ namespace TodoApp.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Abc.Projects.Share.Core._Business.Entities.ResRand", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ResRands", (string)null);
+                });
 
             modelBuilder.Entity("TodoApp.Entities.TodoItem", b =>
                 {
